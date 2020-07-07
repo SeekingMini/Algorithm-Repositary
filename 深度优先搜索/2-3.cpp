@@ -8,12 +8,13 @@
 
 using namespace std;
 
-// 深度优先搜索可以逃脱边界的陆地数量
+// 使用深度优先计算可以逃脱边界的陆地数量
 void dfs(const vector<vector<int>>& A, vector<vector<int>>& visited, int& count, int r, int c)
 {
-    // 碰到海洋或越过边界
-    if (r < 0 || r == A.size() || c < 0 || c == A[0].size() || A[r][c] == 0 || visited[r][c] == 1)
-        return;
+    // 越过边界
+    if (r < 0 || r == A.size() || c < 0 || c == A[0].size() || A[r][c] == 0) return;
+    // 碰到已访问过的地方
+    if (visited[r][c] == 1) return;
 
     count++;
     visited[r][c] = 1; // 标记为已访问
@@ -27,12 +28,12 @@ void dfs(const vector<vector<int>>& A, vector<vector<int>>& visited, int& count,
 
 int numEnclaves(vector<vector<int>>& A)
 {
-    int row = A.size(); // 行数
+    int row = A.size();    // 行数
     int col = A[0].size(); // 列数
 
     vector<vector<int>> visited(row, vector<int>(col, 0));
     int numberOfOnes = 0; // 陆地的数量
-    int count = 0; // 可以到边界的陆地数量
+    int count = 0;        // 可以到边界的陆地数量
 
     for (int r = 0; r < row; r++) {
         for (int c = 0; c < col; c++) {
@@ -40,9 +41,8 @@ int numEnclaves(vector<vector<int>>& A)
             if (A[r][c] == 1) {
                 numberOfOnes++;
                 // 陆地没有被访问过且在边界上
-                if (visited[r][c] == 0 && (r == 0 || r == row - 1 || c == 0 || c == col - 1)) {
+                if (visited[r][c] == 0 && (r == 0 || r == row - 1 || c == 0 || c == col - 1)) 
                     dfs(A, visited, count, r, c);
-                }
             }
         }
     }
