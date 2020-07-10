@@ -13,6 +13,7 @@ void dfs(const vector<vector<int>> &rooms, set<int> &visited, int i) {
 	visited.insert(i);
 
 	for (int j: rooms[i]) {
+		// 如果房间j不在集合中就去访问
 		if (!visited.count(j))
 			dfs(rooms, visited, j);
 	}
@@ -20,8 +21,10 @@ void dfs(const vector<vector<int>> &rooms, set<int> &visited, int i) {
 
 bool canVisitAllRooms(vector<vector<int>> &rooms) {
 	set<int> visited;
+	// 深度优先搜索
 	dfs(rooms, visited, 0);
 
+	// 是否所有房间都访问到
 	return visited.size() == rooms.size();
 }
 
@@ -41,7 +44,7 @@ int main() {
 		rooms.push_back(room);
 	}
 
-	// 计算水域大小
+	// 判断是否能解锁所有房间
 	bool flag = canVisitAllRooms(rooms);
 	cout << flag << endl;
 
