@@ -1,8 +1,11 @@
 /*
- * 字符串压缩
+ * 题目：字符串压缩
+ * 链接：https://leetcode-cn.com/problems/compress-string-lcci/
  */
+
 #include <string>
 #include <iostream>
+
 using namespace std;
 
 string compressString(string S)
@@ -26,15 +29,13 @@ string compressString(string S)
         start = end;
     }
 
-    if (new_S.length() >= l)
-        return S;
-    else
-        return new_S;
+    if (new_S.length() >= l) return S;
+    else return new_S;
 }
 
 int main()
 {
-    string S = "";
+    string S;
     cin >> S;
 
     string compressed = compressString(S);

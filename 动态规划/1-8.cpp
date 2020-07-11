@@ -1,8 +1,11 @@
 /*
- * 使用最小花费爬楼梯
+ * 题目：使用最小花费爬楼梯
+ * 链接：https://leetcode-cn.com/problems/min-cost-climbing-stairs/
  */
+
 #include <vector>
 #include <iostream>
+
 using namespace std;
 
 int minCostClimbingStairs(vector<int> &cost)

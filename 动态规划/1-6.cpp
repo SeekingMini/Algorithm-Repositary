@@ -1,6 +1,8 @@
 /*
- * 区域和检索 - 数组不可变
+ * 题目：区域和检索 - 数组不可变
+ * 链接：https://leetcode-cn.com/problems/range-sum-query-immutable/
  */
+
 #include <vector>
 #include <iostream>
 #include <cstring>

@@ -1,8 +1,11 @@
 /*
- * 面试题 08.01. 三步问题
+ * 题目：三步问题
+ * 链接：https://leetcode-cn.com/problems/three-steps-problem-lcci/
  */
+
 #include <vector>
 #include <iostream>
+
 using namespace std;
 
 int waysToStep(int n)

@@ -1,9 +1,12 @@
 /*
- * 最长回文子序列
+ * 题目：最长回文子序列
+ * 链接：https://leetcode-cn.com/problems/longest-palindromic-subsequence/
  */
+
 #include <string>
 #include <iostream>
 #include <vector>
+
 using namespace std;
 
 int longestPalindromeSubseq(string s)
@@ -36,7 +39,7 @@ int main()
 {
     string s;
 
-    // 输入字符串
+    // 输入数据
     cin >> s;
 
     // 计算最长回文子序列
