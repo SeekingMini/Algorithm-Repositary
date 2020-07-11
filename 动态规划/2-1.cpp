@@ -2,7 +2,9 @@
  * 题目：丑数 II
  * 链接：https://leetcode-cn.com/problems/ugly-number-ii/
  */
+
 #include <vector>
+
 using namespace std;
 
 int getMin(int a, int b, int c)

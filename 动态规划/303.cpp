@@ -4,6 +4,7 @@
 #include <vector>
 #include <iostream>
 #include <cstring>
+
 using namespace std;
 
 class NumArray
