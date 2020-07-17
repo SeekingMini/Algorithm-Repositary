@@ -19,14 +19,20 @@ void dfs(string &S, vector<string> &res, int start) {
     for (int i = start; i < S.size(); i++) {
         // 遇到字母
         if (isLetter(S[i])) {
-            // 做选择
+            // 判断字母大小写
             if (S[i] >= 'a' && S[i] <= 'z') {
+                // 做选择
                 S[i] -= 32;
+                // 继续搜索
                 dfs(S, res, i + 1);
+                // 撤销选择
                 S[i] += 32;
             } else {
+                // 做选择
                 S[i] += 32;
+                // 继续搜索
                 dfs(S, res, i + 1);
+                // 撤销选择
                 S[i] -= 32;
             }
         }
