@@ -52,8 +52,8 @@ int main() {
     // 输入数据
     cin >> S;
 
+    // 计算字母大小写全排列
     vector<string> res = letterCasePermutation(S);
-
     for (const string &str : res)
         cout << str << endl;
 
