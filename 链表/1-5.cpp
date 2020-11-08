@@ -46,7 +46,7 @@ int main() {
 	n2->next = n3;
 	n3->next = n4;
 
-	// 判断是否为环形链表
+	// 反转链表
 	ListNode *head = reverseList(n1);
 	ListNode *p = head;
 	while (p) {
