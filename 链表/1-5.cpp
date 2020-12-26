@@ -36,6 +36,18 @@ ListNode *reverseList(ListNode *head) {
 	return p1;
 }
 
+ListNode *reverseList_recursion(ListNode *head) {
+	if (!head) return nullptr;
+	if (!head->next) return head;
+	
+	// 反转以head->next为头结点的链表
+	ListNode* newHead = reverseList(head->next);
+	head->next->next= head;
+	head->next = nullptr;
+	
+	return newHead;
+}
+
 int main() {
 	// 手动创建链表
 	auto n1 = new ListNode(1);
@@ -47,10 +59,10 @@ int main() {
 	n3->next = n4;
 
 	// 反转链表
-	ListNode *head = reverseList(n1);
+	ListNode *head = reverseList_recursion(n1);
 	ListNode *p = head;
 	while (p) {
-		cout << p->val << "\t";
+		cout << p->val << " ";
 		p = p->next;
 	}
 	cout << endl;
