@@ -17,6 +17,7 @@ Algorithm-Repositary
 - [二分查找](./二分查找)
 - [Line Sweep](./Line%20Sweep)
 - [数据库](./数据库)
+- [排序](./排序)
 
 #### 说明
 
